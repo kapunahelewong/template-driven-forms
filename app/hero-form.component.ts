@@ -20,12 +20,16 @@ export class HeroFormComponent {
 
 
 // Work Around
-  active = true;
+  // active = true;
+
+  // newHero() {
+  //   this.model = new Hero(42, '', '');
+  //   this.active = false;
+  //   setTimeout(() => this.active = true, 0);
+  // }
 
   newHero() {
     this.model = new Hero(42, '', '');
-    this.active = false;
-    setTimeout(() => this.active = true, 0);
   }
 
 

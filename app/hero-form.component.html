@@ -3,7 +3,7 @@
 <div [hidden]="submitted">
   <h1>Template Driven Form</h1>
 
-  <form *ngIf="active" (ngSubmit)="onSubmit()" #heroForm="ngForm">
+  <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
 
       <div class="form-group">
         <label for="name">Name</label>
@@ -33,7 +33,7 @@
       </div>
 
 
-    <button type="button" class="btn btn-default" (click)="newHero()">New Hero</button>
+    <button type="button" class="btn btn-default" (click)="newHero(); heroForm.reset()">New Hero</button>
     <button type="submit" class="btn btn-default" [disabled]="!heroForm.form.valid">Submit</button>
 
     </form>
